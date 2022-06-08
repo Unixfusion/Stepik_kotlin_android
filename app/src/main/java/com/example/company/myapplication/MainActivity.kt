@@ -7,6 +7,7 @@ import android.util.Log
 import android.widget.Button
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlin.Exception
+import kotlin.math.log
 
 
 class MainActivity : AppCompatActivity() {
@@ -79,7 +80,6 @@ class MainActivity : AppCompatActivity() {
     if (temp2 == 0) {
         isError = true
     }
-
     return Data(arg1, arg2, isError)
     }
     fun setButtonResult(input: Data, button: String) {
@@ -96,7 +96,7 @@ class MainActivity : AppCompatActivity() {
                "add" -> plus(input.a.toInt(), input.b.toInt())
                "subtr" -> minus(input.a.toInt(), input.b.toInt())
                "mul" -> multiply(input.a.toInt(), input.b.toInt())
-               "dib" -> divide(input.a.toInt(), input.b.toInt())
+               "divide" -> divide(input.a.toInt(), input.b.toInt())
                else -> { "Input Error" }
            }
 
